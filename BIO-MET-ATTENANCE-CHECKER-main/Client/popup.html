@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="popup" id="popup">
+            <h2>You are about to delete this account</h2>
+            <p>Once you delete this account, it will be permanently removed and 
+                you wont be able to recover them back.<br>
+                Are you sure you want to remove this account ?
+            </p>
+                <div class="click">
+                    <button type="submit" onclick="closepopup()" class="btn-update" >Cancel</button>
+                    <button type="submit" onclick="removeaccount()" class="btn-delete">YES I'M</button>
+                </div>
+                
+        </div>
+    </div>
+    <button type="submit" onclick="openpopup()"> click me</button>
+</body>
+<style>
+    body{
+        background-color: blue;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button{
+        padding: 10px 50px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        margin-left: 2rem;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .popup{
+        height: 10rem;
+        width: 25rem;
+        background-color: orange;
+        border-radius: 1rem;
+        top: 0;
+        position: absolute;
+    }
+     .popup h2{
+        text-align: center;
+        margin: 3px;
+    }
+    .popup p{
+        margin: 0;
+        padding: 10px;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+    }
+</style>
+    <script>
+        let popup=document.getElementById("popup");
+        function openpopup(){
+            popup.classList.add("open-popup");
+        }
+        function closepopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</html>

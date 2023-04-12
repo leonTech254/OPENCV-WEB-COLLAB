@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/source.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <div class="container">
+                <div class="pop">
+                    <div class="popup" id="popup">
+                        <h2>You are about to delete this account</h2>
+                        <p>Once you delete this account, it will be permanently removed and 
+                            you wont be able to recover them back.<br>
+                            Are you sure you want to remove <span style="color: red;">Mutiullahi</span> account from the system?
+                        </p>
+                            <div class="clicks">
+                                <button type="submit" onclick="closepopup()" class="btn-updat" >Cancel</button>
+                                <button type="submit" onclick="removeaccount()" class="btn-del">YES</button>
+                            </div>
+                    </div>
+                        <div class="popup-form" id="popup-form">
+                            <input type="file" id="file-input">
+                            <input type="input" placeholder="Firstname" id="fname">
+                            <input type="input" placeholder="MiddleName" id="mname">
+                            <input type="input" placeholder="Lastname" id="lname">
+                            <input type="email" placeholder="Enter email" id="email">
+                            <div>
+                                <button class="btn" onclick="clearmessage()">Close</button>
+                                <button class="btn" id="btn">Update Form</button>
+                            </div>
+                        </div>
+
+                </div>
+            <div class="menu">
+                <header>
+                    <nav class="head">
+                        <div class="logo">SMARTBIO-MET</div>
+                        <div class="toggle" onclick="toogle()">&#8801</div>
+                        <ul class="navbar">
+                            <li><a href="../Client/index.html">HOME</a></li>
+                            <li><a href="../Client/enrollUser.html">ENROLL</a></li>
+                            <li><a href="../Client/take_attendance.html">TAKE ATTENDANCE</a></li>
+                            <li><a href="../Client/about.html">ABOUT</a></li>
+                            <li><a href="../Client/users.html">USERS</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="users-list">
+                <div class="user">Total Users : (12)</div>
+                <div class="search-user"><input type="search" placeholder="search Users">
+                <button onclick="fetch()" class="search-btn">Search</button>
+                </div>
+            </div>
+            <div class="list-user">
+                <table class="table-set">
+                    <tr>
+                        <td>S/N</td>
+                        <td>IMAGES</td>
+                        <td>Full Name</td>
+                        <td>Email Address</td>
+                        <td>Register Date</td>
+                        <td>Actions</td>
+                        <td>Actions</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>01</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button type="submit" class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>02</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>04</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>07</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>09</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>11</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td><img src="../static/images/image.png" alt="" width="50px"></td>
+                        <td>Mutiullahi Ahmad</td>
+                        <td>ahmadmutiullahi@gmail.com</td>
+                        <td>1 hours ago</td>
+                        <td><button class="btn-update" onclick="update()">Update</button></td>
+                        <td><button class="btn-delete" onclick="remove()">Remove</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/index.js"></script>
+</html>

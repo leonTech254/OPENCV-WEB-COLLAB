@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    background-color: orange;
+    width: 9px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: lime;
+    border-radius: 5px;
+}
+.container{
+    background: linear-gradient(to left, black, rgba(50, 45, 45, 0.76)), url("../static/images/homebg.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+.head{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+.toggle{
+    font-size: 55px;
+    cursor: pointer;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+}
+.navbar li{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.navbar li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+.navbar li a:hover{
+    background-color: orange;
+}
+.banner-welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.banner{
+    margin-left: 2rem;
+}
+.welc-p{
+    font-weight: bolder;
+    color: #fff;
+}
+.users-list{
+    display: flex;
+    justify-content: space-around;
+    color: orange;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+}
+.search-user input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.new-user{
+    border: 2px solid lime;
+    padding: 7px;
+    border-radius: 5px;
+}
+.table-set,th,td{
+border: 1px solid lime;
+font-size: 20px;
+color: orange;
+border-collapse: collapse;
+width: max-content;
+text-align: center;
+margin: 1rem;
+padding: 1rem;
+}
+.list-user{
+    max-height: 85%;
+    overflow: auto;
+}
+.list-user::-webkit-scrollbar{
+    background-color: orange;
+    border-radius: 5px;
+    padding: 1px;
+}
+.list-user::-webkit-scrollbar-thumb{
+    background-color: lime;
+    border-radius: 5px;
+}
+.btn-update{
+    padding: 10px 20px;
+    background-color: lime;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.btn-update:active{
+    padding: 8px;
+    font-size: 10px;
+}
+.btn-delete{
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.btn-delete:active{
+    padding: 8px;
+    font-size: 10px;
+}
+.search-btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: lime;
+    font-size: 15px;
+    font-weight: 600;
+}
+.popup{
+    background-color: orange;
+    width: 25rem;
+    height: 11rem;
+    border-radius: 10px;
+    position: absolute;
+    align-items: center;
+    top: 0%;
+    visibility: hidden;
+}
+.openpopup{
+    visibility: visible;
+    top: 50%;
+}
+.pop{
+    display: flex;
+    justify-content: center;
+}
+.popup h2{
+    text-align: center;
+    margin: 3px;
+}
+.popup p{
+    margin: 0;
+    padding: 10px;
+    font-weight: 600;
+}
+.clicks{
+    display: flex;
+    justify-content: space-around;
+}
+.btn-del{
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.btn-updat{
+    padding: 10px 20px;
+    background-color: lime;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.popup-form{
+    background-color: orange;
+    position: absolute;
+    display: grid;
+    border-radius: 5px;
+    top: 25%;
+    visibility: hidden;
+}
+.open-msg{
+    visibility: visible;
+}
+.popup-form input{
+    margin: 1rem;
+    padding: 8px;
+}
+.popup-form button{
+    padding: 10px;
+    margin: 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: lime;
+    border: none;
+    border-radius: 5px;
+}
+/* for desktop */
+@media screen and (min-width : 801px){
+    .toggle{
+        display: none;
+    }
+}
+/* tablets mode */
+@media screen and (min-width : 567px) and (max-width: 800px){
+    .navbar{
+        display: none;
+    }
+    .navbar li{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+    .navbar li a:hover{
+        background: none;
+        color: lime;
+    }
+    .open.navbar{
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    background: #000;
+    width: 95%;
+}
+.list-user{
+        max-height: 85%;
+        overflow: auto;
+    }
+    .list-user::-webkit-scrollbar{
+        background-color: orange;
+        border-radius: 5px;
+        padding: 1px;
+        height: 9px;
+    }
+    .list-user::-webkit-scrollbar-thumb{
+        background-color: lime;
+        border-radius: 5px;
+    }
+}
+/* android device */
+@media screen and (min-width : 0px) and (max-width: 566px){
+    .navbar{
+        display: none;
+    }
+    .navbar li{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+    .navbar li a:hover{
+        background: none;
+        color: lime;
+    }
+    .open.navbar{
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        background: #000;
+        width: 95%;
+    }
+}

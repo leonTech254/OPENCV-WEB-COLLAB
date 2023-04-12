@@ -1,0 +1,96 @@
+.content{
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+.cont{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.cont li{
+margin-left: 1rem;
+}
+.content-two{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid orange;
+    margin: 1rem;
+    padding: 1rem;
+}
+.icon{
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 1rem;
+    color: lime;
+    text-align: center;
+}
+.icon i{
+    font-size: 50px;
+}
+.admin-view{
+    border: 1px solid orange;
+    color: lime;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+.admin-view img{
+    margin: 1rem;
+}
+.admin-view p{
+    margin: 0;
+}
+.content-view{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.list-user ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    color: orange;
+}
+.list-user input{
+    padding: 10px;
+        border-radius: 5px;
+        border: none;
+}
+.table-set,th,td{
+    border: 1px solid lime;
+    font-size: 20px;
+    color: orange;
+    border-collapse: collapse;
+    width: max-content;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    }
+.other-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.other{
+    border: 2px solid orange;
+    max-height: 600px;
+    overflow: auto;
+}
+.meet{
+    border: 1px solid orange;
+    margin: 1rem;
+    border-radius: 5px;
+    color: lime;
+    padding: 1rem;
+}
+.click button{
+    padding: 10px;
+    background: none;
+    color: orange;
+    border: 1px solid lime;
+    border-radius: 5px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/nav.css"><link rel="stylesheet" href="../static/home.css">
+<script src="./socketLib.js"></script>
+    <link rel="stylesheet" href="../static/source.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+</head>
+<body>
+    <div class="mainmenu">
+        <div class="container">
+            <div class="menu">
+                <header>
+                    <nav class="head">
+                        <div class="logo">SMARTBIO-MET</div>
+                        <div class="toggle" onclick="toogle()">&#8801</div>
+                        <ul class="navbar">
+                            <li><a href="../Client/index.html">HOME</a></li>
+                            <li><a href="../Client/enrollUser.html">ENROLL</a></li>
+                            <li><a href="../Client/take_attendance.html">TAKE ATTENDANCE</a></li>
+                            <li><a href="../Client/about.html">ABOUT</a></li>
+                            <li><a href="../Client/users.html">USERS</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+
+            <div class="app-banner">
+                <div class="title">
+                Welcome to SmartBio-MEt attendance
+                </div>
+                <div class="message-banner">
+                
+                Welcome to the auto-check meeting attendance system - the ultimate solution for hassle-free meeting attendance tracking!
+                Our software application uses cutting-edge machine learning algorithms to automatically track and monitor the attendance
+                of participants in your meetings, so you don't have to.
+                
+                </div>
+                
+                </div>
+            
+    </div>
+    <button onclick="HelloSocket()">Clic me</button>
+
+
+
+
+
+
+
+
+<div id="message"></div>
+
+    </div>
+    
+
+   
+    <script type="text/javascript" charset="utf-8">
+        let message=document.getElementById("message")
+
+        var socket = io.connect("http://127.0.0.1:5000");
+        socket.on('connect', function () {
+            socket.emit('my event', { data: 'I\'m connected!' });
+        });
+        function HelloSocket()
+        {
+            
+          socket.emit("from_flask",{"ok":"i have understood"})
+
+          
+
+        }
+         socket.on("name", (data) => {
+                message.innerHTML += data.name
+
+            })
+    </script>
+</body>
+<script src="../static/index.js"></script>
+</html>
+
+</body>
+</html>
